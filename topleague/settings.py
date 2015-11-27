@@ -26,6 +26,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.sites',
     'principal',
+    'calendario',
 )
 
 MIDDLEWARE_CLASSES = (

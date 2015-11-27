@@ -8,4 +8,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^jornadas/', 'calendario.views.lista_partidos'),
+    url(r'^admin/', include(admin.site.urls)),
 )
