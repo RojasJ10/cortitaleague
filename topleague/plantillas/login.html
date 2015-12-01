@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+            <h1>TOP LEAGUE</h1>
+            <h3>Crea la mejor liga del mundo</h3>
+    </header>
+      <p>AÚN NO TE HAS REGISTRADO?</p>
+      <form action="/login" method="post">
+          <label for="nick">Nombre de Usuario</label>
+          <input name="nick" type="text" id="nick" placeholder="Nombre de Usuario" required>
+          <label for="nombre">Nombre</label>
+          <input name="nombre" type="text" id="nombre" placeholder="Nombre" required>
+          <label for="apellido">Apellido</label>
+          <input name="apellido" type="text" id="apellido" placeholder="Apellido" required>
+          <label for="correo">Correo</label>
+          <input name="email" type="email" id="correo" placeholder="email" required>
+          <button type="submit" name="submit">Registrarse</button>
+      </form>
+      <p>INICIAR SESIÓN</p>
+      <form action="/login" method="post">
+        <!--  {% csrf_token %} !-->
+          <label for="nick">Nombre de Usuario</label>
+          <input type="text" id="nick" placeholder="Nombre de Usuario" required>
+          <label for="nombre">Contraseña</label>
+          <input type="password" id="contraseña" placeholder="Contraseña" required>
+          <label for="acceder">Acceder</label>
+          <button type="submit" name="submit">Acceder</button>
+      </form>
+      <footer>
+            <small>Cortita League, derechos reservados a Jose Manuel Rojas Arroyo, <address>i92roarj@uco.es</address></small>
+      </footer>
+  </body>
+</html>

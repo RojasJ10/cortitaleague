@@ -6,10 +6,12 @@
   </head>
   <body>
     <h1> Conjunto de equipos </h1>
-    {% for elemento in lista %}
+    {% for elemento in equipos %}
     <ul>
           <li>{{elemento.nombre}}</li>
           <li>{{elemento.entrenador}}</li>
+          <li>{{elemento.resultado}}</li>
+          <li>{{elemento.gf}}</li>
     </ul>
     {% endfor %}
   </body>

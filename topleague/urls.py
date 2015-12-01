@@ -3,11 +3,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^equipos/','principal.views.lista_equipos'),
-    url(r'^jugadores/','principal.views.lista_jugadores'),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$','principal.views.login'),
+    # url(r'^$','principal.views.lista_equipos'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^jornadas/', 'calendario.views.lista_partidos'),
     url(r'^admin/', include(admin.site.urls)),
 )

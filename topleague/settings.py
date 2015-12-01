@@ -3,18 +3,16 @@ import os
 
 RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
 
-SECRET_KEY = 'lt9_%t$qxwww^2#j@6w%hl5l*l+%r05e7(0i&cqej9#z5ti#+6'
+SECRET_KEY = 'lhpaujk^5&jw1xyd*@w-9@ei5(enco-#vvguk7gm-&0nj2x@!2'
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Application definition
 
 ADMINS = (
     ('Jose Rojas', 'i92roarj@uco.es'),
 )
-
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -26,7 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.sites',
     'principal',
-    'calendario',
+    'usuarios',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -45,7 +43,7 @@ ROOT_URLCONF = 'topleague.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(RUTA_PROYECTO, 'plantillas')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -58,12 +56,14 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_DIRS= (
+    os.path.join(RUTA_PROYECTO,'plantillas'),
+)
+
 WSGI_APPLICATION = 'topleague.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -75,10 +75,7 @@ DATABASES = {
     }
 }
 
-
 # Internationalization
-# https://docs.djangoproject.com/en/1.8/topics/i18n/
-
 LANGUAGE_CODE = 'es-Es'
 
 TIME_ZONE = 'Europe/Madrid'
@@ -89,4 +86,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+
+LOGIN_URL = '/usuarios/login/'
+
+LOGOUT_URL = '/usuarios/logout/'
