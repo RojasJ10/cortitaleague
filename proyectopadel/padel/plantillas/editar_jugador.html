@@ -1,0 +1,20 @@
+{% extends 'inicio.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Padel Manager 2016</title>
+    <meta charset="utf-8">
+</head>
+<body>
+  {% block contenido %}
+  <center>
+<br><h2>Editar Jugador</h2>
+<form action='' method='post'> {% csrf_token%}
+    {{ form }}
+    <br><input type="submit" value="Guardar cambios"><br><br>
+    <b><a href="/jugadores">Volver sin guardar</a></b><br><br>
+</form>
+    {% endblock %}
+  </center>
+</body>
+</html>

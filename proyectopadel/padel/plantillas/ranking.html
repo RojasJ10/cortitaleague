@@ -1,0 +1,29 @@
+{% extends 'inicio.html' %}
+<html>
+<head>
+<title>Padel Manager 2016</title>
+</head>
+<body>
+{% block contenido %}
+<center>
+<br><h1>RANKING</h1><br>
+<table border="4">
+<tr>
+  <td><strong><center>PAREJA</center></strong><br></td>
+  <td><strong><center>VICTORIAS</center></strong><br></td>
+	<td><strong><center>DERROTAS</center></strong><br></td>
+	<td><strong><center>PUNTOS</center></strong><br></td>
+</tr>
+ {% for i in datos %}
+  <tr>
+  <td><center>{{i.jugador1}}/{{i.jugador2}}</center></td>
+  <td><center>{{i.victorias}}</center></td>
+  <td><center>{{i.derrotas}}</center></td>
+	<td><center>{{i.puntos}}</center></td>
+ </tr>
+{% endfor %}
+</table>
+{% endblock %}
+</center>
+</body>
+</html>

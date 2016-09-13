@@ -1,0 +1,22 @@
+{% extends 'inicio.html' %}
+<html>
+<head>
+<title>Padel Manager 2016</title>
+</head>
+
+
+<body>
+{% block contenido %}
+<center>
+<br><h1>PISTAS</h1><br>
+<a href="/pistaform"><b><u>Haga click aquí para añadir una pista</b></u></a><br><br>
+
+{% for i in datos %}
+	<h1>{{i.nombre_pista}} ({{i.ciudad}})</h1>
+	<br><img src='/media/{{i.foto}}'><br>
+	<a href="/pistas/editarpista/{{i.idpista}}"><small>(Editar Pista)</small></a><br><br>
+{% endfor %}
+{% endblock %}
+</center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PADEL MANAGER 2016</title>
+    <meta charset="utf-8">
+</header>
+<body background="{{STATIC_URL}}img/fond.jpg">
+<center>
+<br><br><a href="/"><img src="{{STATIC_URL}}img/logo.png" alt=""/><br><small>(Haga click en la imagen para volver)</small></a>
+	<form id='formulario' method='post' action=''>{% csrf_token %}
+		<table>{{formulario}}</table>
+		<p><input type='submit' value='Registrar' /></p>
+	</form>
+</center>
+</body>
+</html>

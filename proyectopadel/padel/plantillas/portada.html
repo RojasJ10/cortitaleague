@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>UCO Padel Manager 2016</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{STATIC_URL}}css/main.css" />
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<img src="{{STATIC_URL}}img/aa.png" alt="" /><hr>
+						<h1>UCO Padel Manager 2016</h1>
+						<ul>
+							<li><a href="/nuevousuario"><span class="label">Aún no te has registrado?</span></a></li>
+							<li><a href="/ingresar"><span class="label">Ya eres usuario?</span></a></li>
+							<li><a href="/index"><span class="label">Entrar como invitado</span></a></li>
+						</ul>
+						<nav>
+							<ul>
+								<li><a href="https://twitter.com/worldpadeltour?lang=es" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/worldpadeltour/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="http://www.worldpadeltour.com/" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</nav>
+					</header>
+					<footer id="footer">
+						<span class="copyright">&copy; UCO Padel Manager 2016. Design: José Manuel Rojas Arroyo (i92roarj@uco.es).</span>
+					</footer>
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>

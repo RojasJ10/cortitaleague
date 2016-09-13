@@ -1,0 +1,21 @@
+{% extends 'inicio.html' %}
+<html>
+<head>
+<title>Padel Manager 2016</title>
+</head>
+
+
+<body>
+	{% block contenido %}
+	<center>
+	<br><h1><strong>{{y.nombre}}</strong></h1><br>
+
+	<b>Posicion</b>: {{y.posicion}}<br>
+	<b>Dni:</b> {{y.dni}}<br>
+	<b>Edad:</b> {{y.edad}}<br>
+	<b>Altura:</b> {{y.altura}}<br>
+	<img src='/media/{{y.foto}}'><br><br>
+{% endblock %}
+</center>
+</body>
+</html>
