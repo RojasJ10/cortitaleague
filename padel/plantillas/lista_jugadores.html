@@ -1,0 +1,29 @@
+{% extends 'inicio.html' %}
+<html>
+<head>
+<title>Padel Manager 2016</title>
+</head>
+<body>
+{% block contenido %}
+<center>
+<br><h1><u>JUGADORES</u></h1>
+<a href="/jugadorform"><b><u>Haga click aquí para añadir un jugador</b></u></a><br><br>
+
+
+<table border="4">
+		{% for i in jugadores %}
+			<colgroup>
+				<col />
+				<col />
+			</colgroup>
+			<thead>
+				<tr>
+					<th><center><h1>{{i.nombre}}</h1><br><a href="/jugadores/editarjugador/{{i.nombre}}">(Editar Jugador)</a></center></th>
+					<th><center><a href="/jugadores/detalle/{{i.nombre}}"><img src='/media/{{i.foto}}'><br>(Más información)</center></a></th>
+				</tr>
+{% endfor %}
+</table>
+{% endblock %}
+</center>
+</body>
+</html>

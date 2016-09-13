@@ -1,0 +1,29 @@
+{% extends 'inicio.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Padel Manager 2016</title>
+    <meta charset="utf-8">
+</head>
+<body>
+  {% block contenido %}
+  <center>
+  <br><h1><strong>SESIÓN INICIADA</strong></h1>
+  <h3> Nombre: {{usuario.username|upper}}</h3>
+  <h3> Contacto: {{usuario.email}} </h3>
+	<h3> Ultima visita: {{usuario.last_login}} </h3>
+	<h3> Fecha de creacion: {{usuario.date_joined}} </h3>
+	{% if usuario.is_superuser %}
+	<h3>Administrador : SI</h3>
+	{% else %}
+	<h3>Administrador : NO</h3>
+	{% endif %}
+	{% if usuario.is_active %}
+	<h3>Activo : SI</h3>
+	{% else %}
+	<h3>Activo : NO</h3>
+	{% endif %}
+{% endblock %}
+</center>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>UCO Padel Manager 2016</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{{STATIC_URL}}css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="{{STATIC_URL}}css/style.css" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.11.1.min.js"></script>
+<script src="{{STATIC_URL}}js/responsiveslides.min.js"></script>
+<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+</script>
+<script type="text/javascript" src="js/hover_pack.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="header_top">
+		<div class="container">
+			<div class="logo">
+				<a href="/index"><img src="{{STATIC_URL}}img/logo.png" alt=""/></a>
+			</div>
+			<ul class="shopping_grid">
+			      <a href="/editarperfil"><li>Editar Perfil</li></a>
+			      <a href="/cerrar"><li>Cerrar Sesión</li></a>
+			      <div class="clearfix"> </div>
+			</ul>
+		    <div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="h_menu4"><!-- start h_menu4 -->
+		<div class="container">
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li class="active"><a href="index.html">Bienvenido</a></li>
+          <li><a href="/jugadores">Jugadores</a></li>
+					<li><a href="/parejas">Parejas</a></li>
+					<li><a href="/ranking">Ranking</a></li>
+					<li><a href="/calendario">Calendario</a></li>
+					<li><a href="/arbitros">Árbitros</a></li>
+					<li><a href="/pistas">Pistas</a></li>
+				 </ul>
+				 <script type="text/javascript" src="{{STATIC_URL}}js/nav.js"></script>
+	      </div>
+     </div>
+</div>
+<div class="slider">
+	  <div class="callbacks_container">
+	      <ul class="rslides" id="slider">
+	        <li><img src="{{STATIC_URL}}img/banner1.jpg" class="img-responsive" alt=""/>
+	        <div class="banner_desc">
+				<h1>Tu liga de Padel al alcance de la mano!</h1>
+			</div>
+	        </li>
+	        <li><img src="{{STATIC_URL}}img/banner2.jpg" class="img-responsive" alt=""/>
+	         <div class="banner_desc">
+				<h1>Con la gestión de jugadores y parejas a un sólo click!</h1>
+			 </div>
+	        </li>
+	        <li><img src="{{STATIC_URL}}img/banner3.jpg" class="img-responsive" alt=""/>
+	          <div class="banner_desc">
+				<h1>Añade las pistas donde se disputará tu liga de padel y los árbitros que dirigirán los apasionantes encuentros!</h1>
+			  </div>
+	        </li>
+	      </ul>
+	  </div>
+</div>
+		<script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+
+			});
+		</script>
+    {% block contenido %}{% endblock %}
+       </div>
+					    <center><p>&copy; UCO Padel Manager 2016. Design: José Manuel Rojas Arroyo (i92roarj@uco.es).</a></p></center>
+		    </div>
+		    <div class="clearfix"> </div>
+       	</div>
+</div>
+</body>
+</html>

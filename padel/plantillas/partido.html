@@ -1,0 +1,21 @@
+{% extends 'inicio.html' %}
+<html>
+<head>
+<title>Padel Manager 2016</title>
+</head>
+<body>
+{% block contenido %}
+<a href="/partidos">Ver más partidos</a><br><br>
+<a href="/parejas">Ver parejas</a><br><br>
+
+PARTIDO: {{y.pareja1}} VS {{y.pareja2}}<br><br>
+ID Partido> {{y.idpartido}}<br><br>
+Fecha:{{y.fecha}}<br><br>
+Pista:{{y.pista}} en {{y.pista.ciudad}}<br><br>
+Arbitro:{{y.arbitro}}<br><br>
+Resultado:
+  {{y.set1p1}}-{{y.set1p2}}, {{y.set2p1}}-{{y.set2p2}}, {{y.set3p1}}-{{y.set3p2}}<br><br>
+---------------------------------------- <br><br>
+{% endblock %}
+</body>
+</html>
